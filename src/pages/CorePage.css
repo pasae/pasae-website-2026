@@ -1,0 +1,61 @@
+.core-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.core-group-heading {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.core-group--azure .core-group-heading { color: var(--azure); }
+.core-group--vermillion .core-group-heading { color: var(--vermillion); }
+.core-group--gold .core-group-heading { color: #a5780d; }
+
+.core-group-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 32px 24px;
+}
+
+.core-member-photo {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 14px;
+  background: var(--paper-deep);
+}
+
+.core-member-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.core-member-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.98rem;
+  line-height: 1.3;
+  color: var(--ink);
+  margin-bottom: 3px;
+}
+
+.core-member-role {
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 640px) {
+  .core-group-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 26px 16px; }
+}

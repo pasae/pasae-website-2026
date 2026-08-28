@@ -1,0 +1,123 @@
+.footer {
+  background: var(--paper-deep);
+  border-top: 3px solid var(--azure);
+  padding: 64px var(--edge) 32px;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 56px;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.footer-brand { display: flex; flex-direction: column; gap: 22px; }
+
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.03em;
+}
+
+.footer-logo-img { width: 28px; height: 28px; }
+
+.footer-contacts { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+
+.footer-contacts a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+  transition: color 0.2s ease;
+}
+
+.footer-contacts a:hover { color: var(--azure); }
+
+.footer-contact-icon { width: 18px; height: 18px; flex-shrink: 0; }
+
+.footer-columns {
+  display: flex;
+  gap: 64px;
+}
+
+.footer-column { display: flex; flex-direction: column; min-width: 120px; }
+
+.footer-column-heading {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+
+.footer-column a {
+  text-decoration: none;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  padding: 6px 0;
+  transition: color 0.2s ease;
+}
+
+.footer-column a:hover { color: var(--azure); }
+
+.footer-bottom {
+  max-width: 1240px;
+  margin: 56px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+}
+
+.footer-ocf { display: inline-flex; flex-shrink: 0; }
+.footer-ocf img { display: block; }
+
+.footer-disclaimer {
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: var(--ink-faint);
+  max-width: 60ch;
+  flex: 1;
+}
+
+.footer-old-site {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--ink-faint);
+  white-space: nowrap;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+.footer-old-site:hover { color: var(--azure); }
+
+.footer-copy {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--ink-faint);
+  white-space: nowrap;
+}
+
+@media (max-width: 780px) {
+  .footer-top { grid-template-columns: 1fr; gap: 40px; }
+  .footer-columns { gap: 40px; }
+}
+
+@media (max-width: 480px) {
+  .footer-columns { flex-direction: column; gap: 28px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+}

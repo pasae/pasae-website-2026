@@ -1,0 +1,19 @@
+.events-page .page-section-head.section-head {
+  max-width: none;
+}
+
+.events-page .section-body {
+  max-width: none;
+}
+
+.flyer-block-grid.events-page-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 900px) {
+  .flyer-block-grid.events-page-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .flyer-block-grid.events-page-grid { grid-template-columns: repeat(2, 1fr); }
+}

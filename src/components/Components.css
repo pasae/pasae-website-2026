@@ -1,0 +1,141 @@
+.components { background: var(--paper); }
+
+.section.components {
+  --section-pad: 60px;
+}
+
+.components-layout {
+  position: relative;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  min-height: 495px;
+}
+
+.components-head.section-head {
+  max-width: 520px;
+  margin-bottom: 0;
+}
+
+.components-cta { margin-top: 4px; }
+
+.components-media {
+  flex: 1;
+  min-width: 0;
+}
+
+.components-stage {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--paper-deep);
+}
+
+.components-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.components-slide.is-active { opacity: 1; }
+
+.components-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* This photo's aspect ratio nearly matches the stage's, so
+   object-position has no crop room to work with — the shift has to
+   ride on the zoom itself, via translateY. */
+.components-slide--azure img {
+  transform: scale(1.15) translateY(7%);
+}
+
+.components-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 12px;
+  background: rgba(7, 17, 36, 0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 999px;
+}
+
+.components-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.components-dot:hover { transform: scale(1.15); }
+
+.components-dot--vermillion.is-active { background: var(--vermillion); border-color: var(--vermillion); }
+.components-dot--azure.is-active { background: var(--azure); border-color: var(--azure); }
+.components-dot--gold.is-active { background: var(--gold); border-color: var(--gold); }
+
+.components-caption {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+}
+
+.components-caption-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--ink);
+}
+
+.components-caption-pillar {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1.05rem;
+  line-height: 1.3;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 900px) {
+  .section.components {
+    --section-pad: 48px;
+  }
+
+  .components-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 0;
+  }
+
+  /* DOM has the media block first (visually left on desktop) — flip it
+     after the header on mobile */
+  .components-head.section-head { order: -1; max-width: none; }
+
+  .components-media { margin-top: 32px; }
+
+  .components-stage { aspect-ratio: 4 / 3; }
+}
+
+@media (max-width: 480px) {
+  .components-dots { bottom: 14px; padding: 8px 10px; }
+}

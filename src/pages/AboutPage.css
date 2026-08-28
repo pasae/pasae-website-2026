@@ -1,0 +1,45 @@
+.about-page .page-section-head.section-head {
+  max-width: none;
+}
+
+.about-page .section-body {
+  max-width: none;
+}
+
+.about-membership-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3px;
+  background: var(--line);
+}
+
+.about-membership-card {
+  background: var(--paper);
+  border-top: 3px solid var(--line-strong);
+  padding: 28px 26px 30px;
+}
+
+.about-membership-card--vermillion { border-top-color: var(--vermillion); }
+.about-membership-card--azure { border-top-color: var(--azure); }
+
+.about-membership-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--ink);
+}
+
+.about-membership-card p {
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 860px) {
+  .about-membership-grid { grid-template-columns: 1fr; }
+}
+
+.about-membership-cta {
+  display: inline-flex;
+  margin-top: 24px;
+}

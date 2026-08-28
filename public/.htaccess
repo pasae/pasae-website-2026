@@ -1,0 +1,14 @@
+# This is a client-side-routed React app (react-router-dom) — Apache has
+# no idea routes like /about or /join exist as anything but index.html
+# with JS that reads the URL. Without this, a direct visit or a page
+# refresh on any route but "/" 404s. Rewrite everything that isn't a
+# real file/directory back to index.html and let the app's router do
+# the rest.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>

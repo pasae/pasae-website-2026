@@ -1,0 +1,90 @@
+/* no PageHero on this page, so clear the fixed nav manually (80px = nav height) */
+.members-page {
+  margin-top: 80px;
+  min-height: calc(100vh - 80px);
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 56px var(--edge) 100px;
+  background: var(--paper);
+}
+
+.members-page-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.members-page-title.section-title {
+  max-width: none;
+  margin-bottom: 10px;
+}
+
+.members-page-sub {
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+}
+
+.members-page-logout {
+  background: none;
+  border: 0;
+  padding: 0;
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+.members-page-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+  background: var(--line);
+}
+
+.members-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--paper);
+  border-top: 3px solid var(--line-strong);
+  padding: 30px 26px 32px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: background 0.2s ease;
+}
+
+.members-card:hover { background: var(--paper-deep); }
+
+.members-card--vermillion { border-top-color: var(--vermillion); }
+.members-card--gold { border-top-color: var(--gold); }
+.members-card--azure { border-top-color: var(--azure); }
+
+.members-card-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.members-card-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: var(--ink);
+}
+
+.members-card-body {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  flex: 1;
+}
+
+.members-card-cta { margin-top: 6px; }
+
+@media (max-width: 900px) {
+  .members-page-grid { grid-template-columns: 1fr; }
+  .members-page-head { flex-direction: column; }
+}

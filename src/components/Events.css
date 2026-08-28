@@ -1,0 +1,112 @@
+.section.events {
+  --section-pad: 60px;
+}
+
+.events-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 420px) minmax(0, 1.15fr);
+  gap: 72px;
+  max-width: 1240px;
+  margin: 0 auto;
+  align-items: center;
+  min-height: 495px;
+}
+
+.events-head.section-head {
+  margin-bottom: 0;
+  max-width: none;
+}
+
+.events-cta { margin-top: 4px; }
+
+.flyer-block-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+  background: var(--line);
+}
+
+.flyer-block a {
+  position: relative;
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--paper-deep);
+}
+
+.flyer-block-bg,
+.flyer-block-fg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.flyer-block-bg {
+  object-fit: cover;
+  filter: blur(16px) saturate(1.15) brightness(0.9);
+  transform: scale(1.2);
+}
+
+.flyer-block-fg { object-fit: contain; }
+
+.flyer-block-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-align: center;
+  padding: 16px;
+  background: rgba(7, 17, 36, 0.78);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.flyer-block a:hover .flyer-block-overlay,
+.flyer-block a:focus-visible .flyer-block-overlay {
+  opacity: 1;
+}
+
+.flyer-block-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: #fff;
+}
+
+.flyer-block-kind {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 900px) {
+  .section.events {
+    --section-pad: 48px;
+  }
+}
+
+@media (max-width: 860px) {
+  .events-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    min-height: 0;
+  }
+
+  .flyer-block-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 780px) {
+  .flyer-block-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .flyer-block-grid { grid-template-columns: repeat(2, 1fr); }
+}

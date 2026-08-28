@@ -1,0 +1,28 @@
+/* no PageHero on these pages, so clear the fixed nav manually (80px = nav height) */
+.board-page {
+  margin-top: 80px;
+}
+
+.board-page-head {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 56px var(--edge) 0;
+}
+
+.board-page-back {
+  display: inline-flex;
+  margin-bottom: 24px;
+}
+
+.board-page-title.section-title {
+  max-width: none;
+  margin-bottom: 14px;
+}
+
+.board-page-sub {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 62ch;
+  margin-bottom: 8px;
+}

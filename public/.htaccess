@@ -12,3 +12,10 @@
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule . /index.html [L]
 </IfModule>
+
+# Fallback for hosts where mod_rewrite isn't enabled (this appears to be
+# the case on OCF's group vhosts — the block above goes silently inert
+# and direct/refreshed visits to any non-root route just 404). Apache's
+# ErrorDocument directive needs no extra module, so this still routes a
+# 404 to index.html and lets the React router take over from there.
+ErrorDocument 404 /index.html

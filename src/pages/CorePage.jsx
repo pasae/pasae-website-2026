@@ -14,7 +14,7 @@ export default function CorePage() {
       />
 
       <PageSection
-        title="Core 38"
+        title="Core 39"
       >
         <div className="core-groups">
           {CORE.map((g) => (

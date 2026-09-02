@@ -15,6 +15,8 @@ import paul from '../assets/core/paul.jpg'
 import aliana from '../assets/core/aliana.jpg'
 import khaia from '../assets/core/khaia.jpg'
 
+export const CURRENT_CORE = 39
+
 export const CORE = [
   {
     group: 'Executive',

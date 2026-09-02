@@ -1,6 +1,6 @@
 import PageHero from '../components/PageHero'
 import PageSection from '../components/PageSection'
-import { CORE } from '../data/core'
+import { CORE, CURRENT_CORE } from '../data/core'
 import heroPhoto from '../assets/heroes/core.jpg'
 import './CorePage.css'
 
@@ -14,7 +14,7 @@ export default function CorePage() {
       />
 
       <PageSection
-        title="Core 39"
+        title={`Core ${CURRENT_CORE}`}
       >
         <div className="core-groups">
           {CORE.map((g) => (

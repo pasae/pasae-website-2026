@@ -27,9 +27,9 @@
 }
 
 .core-member-photo {
+  position: relative;
   aspect-ratio: 1;
   border-radius: 50%;
-  overflow: hidden;
   margin-bottom: 14px;
   background: var(--paper-deep);
 }
@@ -39,6 +39,21 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  border-radius: 50%;
+}
+
+.core-member-photo::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  background: var(--line-strong);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.core-member-photo:hover::after {
+  opacity: 1;
 }
 
 .core-member-name {

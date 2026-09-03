@@ -53,7 +53,7 @@ export const CORE = [
     tag: 'gold',
     members: [
       { name: 'Shane Canet', role: 'Social Chair', img: shane },
-      { name: 'Christian Yim', role: 'Co-Webmaster', img: christian },
+      { name: 'Christian Yim', role: 'Webmaster', img: christian },
       { name: 'Aliana Buhain', role: 'Public Relations Officer and Historian', img: aliana },
     ],
   },

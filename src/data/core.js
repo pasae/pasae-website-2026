@@ -7,7 +7,7 @@ import christian from '../assets/core/christian.jpg'
 import sophia from '../assets/core/sophia.jpg'
 import willa from '../assets/core/willa.jpg'
 import lauren from '../assets/core/lauren.jpg'
-import creamer from '../assets/core/creamer.jpg'
+import benji from '../assets/core/benji.jpg'
 import ysa from '../assets/core/ysa.jpg'
 import justin from '../assets/core/justin.jpg'
 import julian from '../assets/core/julian.jpg'
@@ -33,7 +33,7 @@ export const CORE = [
     members: [
       { name: 'Willa Mapaye', role: 'Treasurer', img: willa },
       { name: 'Lauren Punongbayan', role: 'Secretary', img: lauren },
-      { name: 'Benjamin Furagganan', role: 'Transfer Representative', img: creamer },
+      { name: 'Benjamin Furagganan', role: 'Transfer Representative', img: benji },
       { name: 'Khaia Alvarado', role: 'Field Studies', img: khaia },
     ],
   },

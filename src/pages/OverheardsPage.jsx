@@ -6,7 +6,7 @@ import { OVERHEARDS } from '../data/overheards'
 import './BoardPage.css'
 
 // Paste the Overheards form's link here — same as Confessions.
-const OVERHEARDS_FORM_URL = ''
+const OVERHEARDS_FORM_URL = 'https://forms.gle/XB7b4LDUCDeYN45y8'
 
 export default function OverheardsPage() {
   return (

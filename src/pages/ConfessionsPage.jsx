@@ -7,7 +7,7 @@ import './BoardPage.css'
 
 // Paste the Confessions form's link here (the normal "Send" link is
 // fine — this is a link-out, not an embed, so no ?embedded=true needed).
-const CONFESSIONS_FORM_URL = ''
+const CONFESSIONS_FORM_URL = 'https://forms.gle/PWQnHQmsZf92h751A'
 
 export default function ConfessionsPage() {
   return (

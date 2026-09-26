@@ -1,14 +1,41 @@
 .entry-list {
   list-style: none;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 3px;
   background: var(--line);
+}
+
+@media (max-width: 700px) {
+  .entry-list {
+    grid-template-columns: 1fr;
+  }
 }
 
 .entry-list-item {
   background: var(--paper);
   padding: 20px 24px;
+}
+
+/* Fixed text color on these, per background — brand colors stay
+   roughly this dark/light regardless of site theme, so the usual
+   light/dark --ink swap would go unreadable on one side or the other. */
+.entry-list-item--gold {
+  background: var(--gold);
+  --ink: #14161a;
+  --ink-faint: rgba(20, 22, 26, 0.6);
+}
+
+.entry-list-item--azure {
+  background: var(--azure);
+  --ink: #ffffff;
+  --ink-faint: rgba(255, 255, 255, 0.72);
+}
+
+.entry-list-item--vermillion {
+  background: var(--vermillion);
+  --ink: #ffffff;
+  --ink-faint: rgba(255, 255, 255, 0.72);
 }
 
 .entry-list-empty {
@@ -34,6 +61,7 @@
   font-size: 1.02rem;
   line-height: 1.6;
   color: var(--ink);
+  white-space: pre-line;
 }
 
 .entry-title {

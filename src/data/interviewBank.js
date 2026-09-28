@@ -11,6 +11,8 @@
 //   kind: 'e.g. Behavioral, Technical, Case',
 //   question: 'The actual question(s) asked.',
 //   answer: 'The answer given, in their own words — shown when the card is clicked.',
+//   name: 'Who shared this (shown on the back, next to the answer).',
+//   email: 'Contact email for follow-up questions (shown on the back, under the name). Optional.',
 //   notes: 'Format, how it went — whatever else is useful to the next person.',
 // }
 export const INTERVIEW_BANK = [
@@ -22,6 +24,8 @@ export const INTERVIEW_BANK = [
     kind: 'Behavioral',
     question: 'Placeholder question — remove after review.',
     answer: 'Placeholder answer — remove after review.',
+    name: 'Test Name',
+    email: 'test@example.com',
     notes: 'Placeholder entry to check layout — remove after review.',
   },
   {
@@ -32,6 +36,8 @@ export const INTERVIEW_BANK = [
     kind: 'Technical',
     question: 'Placeholder question — remove after review.',
     answer: 'Placeholder answer — remove after review.',
+    name: 'Test Name',
+    email: 'test@example.com',
     notes: 'Placeholder entry to check layout — remove after review.',
   },
   {
@@ -42,6 +48,8 @@ export const INTERVIEW_BANK = [
     kind: 'Case',
     question: 'Placeholder question — remove after review.',
     answer: 'Placeholder answer — remove after review.',
+    name: 'Test Name',
+    email: 'test@example.com',
     notes: 'Placeholder entry to check layout — remove after review.',
   },
 ]

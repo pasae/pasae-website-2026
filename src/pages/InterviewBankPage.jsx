@@ -51,7 +51,21 @@ export default function InterviewBankPage() {
               <p className="entry-notes">{entry.notes}</p>
             </>
           )}
-          renderBack={(entry) => <p className="entry-question">{entry.answer}</p>}
+          renderBack={(entry) => (
+            <>
+              <p className="entry-question">{entry.answer}</p>
+              {entry.name && <span className="entry-meta">— {entry.name}</span>}
+              {entry.email && (
+                <a
+                  className="entry-meta entry-email"
+                  href={`mailto:${entry.email}`}
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  {entry.email}
+                </a>
+              )}
+            </>
+          )}
         />
       </PageSection>
     </div>

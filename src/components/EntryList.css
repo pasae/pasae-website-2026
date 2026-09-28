@@ -114,6 +114,24 @@
   margin-bottom: 10px;
 }
 
+/* Emails keep their original case and sit on their own line under the name.
+   Clickable mailto link — turns hyperlink blue and bold on hover. */
+.entry-email {
+  display: block;
+  width: fit-content;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.entry-email:hover,
+.entry-email:focus-visible {
+  color: #0b7285;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
 .entry-question {
   font-size: 0.98rem;
   font-weight: 500;

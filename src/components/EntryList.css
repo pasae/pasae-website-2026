@@ -22,20 +22,53 @@
    light/dark --ink swap would go unreadable on one side or the other. */
 .entry-list-item--gold {
   background: var(--gold);
-  --ink: #14161a;
-  --ink-faint: rgba(20, 22, 26, 0.6);
+  --ink: #ffffff;
+  --ink-soft: rgba(255, 255, 255, 0.85);
+  --ink-faint: rgba(255, 255, 255, 0.72);
 }
 
 .entry-list-item--azure {
   background: var(--azure);
   --ink: #ffffff;
+  --ink-soft: rgba(255, 255, 255, 0.85);
   --ink-faint: rgba(255, 255, 255, 0.72);
 }
 
 .entry-list-item--vermillion {
   background: var(--vermillion);
   --ink: #ffffff;
+  --ink-soft: rgba(255, 255, 255, 0.85);
   --ink-faint: rgba(255, 255, 255, 0.72);
+}
+
+.entry-flip {
+  cursor: pointer;
+  position: relative;
+}
+
+@keyframes entry-flip-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.entry-flip-content {
+  animation: entry-flip-fade 0.6s ease;
+}
+
+.entry-flip-hint {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-top: 12px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.entry-flip:hover .entry-flip-hint {
+  opacity: 1;
 }
 
 .entry-list-empty {
@@ -79,6 +112,14 @@
   text-transform: uppercase;
   color: var(--ink-faint);
   margin-bottom: 10px;
+}
+
+.entry-question {
+  font-size: 0.98rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--ink);
+  margin-bottom: 8px;
 }
 
 .entry-notes {

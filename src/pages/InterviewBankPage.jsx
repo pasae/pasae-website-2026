@@ -6,7 +6,7 @@ import { INTERVIEW_BANK } from '../data/interviewBank'
 import './BoardPage.css'
 
 // Paste the Interview Bank form's link here — same as Confessions.
-const INTERVIEW_FORM_URL = ''
+const INTERVIEW_FORM_URL = 'https://forms.gle/p6cHekmihh7vcjzj9'
 
 export default function InterviewBankPage() {
   return (
@@ -44,11 +44,14 @@ export default function InterviewBankPage() {
               </p>
               <span className="entry-meta">
                 {entry.season}
+                {entry.application ? ` · ${entry.application}` : ''}
                 {entry.kind ? ` · ${entry.kind}` : ''}
               </span>
+              {entry.question && <p className="entry-question">{entry.question}</p>}
               <p className="entry-notes">{entry.notes}</p>
             </>
           )}
+          renderBack={(entry) => <p className="entry-question">{entry.answer}</p>}
         />
       </PageSection>
     </div>
